@@ -1,90 +1,41 @@
-# Eliza
+# W.A.I.F.U starter for ElizaOS
 
-## Edit the character files
+This is the starter for W.A.I.F.U using the ElizaOS framework. Currently, its only meant to be shown as a example of what is possible and help developers get started using waifuSDK.
 
-Open `src/character.ts` to modify the default character. Uncomment and edit.
+Please refer to the [ElizaOS documentation](https://github.com/elizaos/elizaos) for setup.
 
-### Custom characters
+# How is W.A.I.F.U used?
 
-To load custom characters instead:
-- Use `pnpm start --characters="path/to/your/character.json"`
-- Multiple character files can be loaded simultaneously
+In this example we are using W.A.I.F.U to use eliza character and ask questions about specific tokens and how it feels about it.
 
-### Add clients
-```
-# in character.ts
-clients: [Clients.TWITTER, Clients.DISCORD],
+# Setup
 
-# in character.json
-clients: ["twitter", "discord"]
+1. Clone the repository
+
+```bash
+git clone https://github.com/elizaos/elizaos.git
 ```
 
-## Duplicate the .env.example template
+2. Navigate to the repository
+
+```bash
+cd elizaos
+```
+
+3. Install the dependencies
+
+```bash
+pnpm install
+```
+
+1. Setup .env
 
 ```bash
 cp .env.example .env
 ```
 
-\* Fill out the .env file with your own values.
-
-### Add login credentials and keys to .env
-```
-DISCORD_APPLICATION_ID="discord-application-id"
-DISCORD_API_TOKEN="discord-api-token"
-...
-OPENROUTER_API_KEY="sk-xx-xx-xxx"
-...
-TWITTER_USERNAME="username"
-TWITTER_PASSWORD="password"
-TWITTER_EMAIL="your@email.com"
-```
-
-## Install dependencies and start your agent
+5. Start the application
 
 ```bash
-pnpm i && pnpm start
-```
-Note: this requires node to be at least version 22 when you install packages and run the agent.
-
-## Run with Docker
-
-### Build and run Docker Compose (For x86_64 architecture)
-
-#### Edit the docker-compose.yaml file with your environment variables
-
-```yaml
-services:
-    eliza:
-        environment:
-            - OPENROUTER_API_KEY=blahdeeblahblahblah
-```
-
-#### Run the image
-
-```bash
-docker compose up
-```
-
-### Build the image with Mac M-Series or aarch64
-
-Make sure docker is running.
-
-```bash
-# The --load flag ensures the built image is available locally
-docker buildx build --platform linux/amd64 -t eliza-starter:v1 --load .
-```
-
-#### Edit the docker-compose-image.yaml file with your environment variables
-
-```yaml
-services:
-    eliza:
-        environment:
-            - OPENROUTER_API_KEY=blahdeeblahblahblah
-```
-
-#### Run the image
-
-```bash
-docker compose -f docker-compose-image.yaml up
+pnpm start
 ```

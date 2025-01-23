@@ -1,0 +1,30 @@
+{
+  "ETH": {
+    "name": "Ether",
+    "symbol": "ETH",
+    "chain": "ethereum",
+    "id": 2
+  },
+  "SOL": {
+    "name": "Solana",
+    "symbol": "SOL",
+    "chain": "solana",
+    "id": 3079
+  },
+  "BTC": {
+    "name": "Bitcoin",
+    "symbol": "BTC",
+    "id": 1
+  },
+  "TRUMP": {
+    "name": "Trump",
+    "symbol": "TRUMP",
+    "id": 147984
+  },
+  "VINE": {
+    "name": "Vine",
+    "symbol": "VINE",
+    "address": "6AJcP7wuLwmRYLBNbi825wgguaPsWzPBEHcHndpRpump",
+    "chain": "solana"
+  }
+}
