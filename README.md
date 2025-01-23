@@ -10,9 +10,7 @@ In this example we are using W.A.I.F.U to use elizaOS and ask questions about sp
 
 ## Demo Video
 
-<div align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Gw7DDG22sT0" title="WaifuSDK Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+https://www.youtube.com/watch?v=Gw7DDG22sT0
 
 # Setup
 
