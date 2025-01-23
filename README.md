@@ -8,6 +8,12 @@ Please refer to the [ElizaOS documentation](https://github.com/elizaos/eliza) fo
 
 In this example we are using W.A.I.F.U to use elizaOS and ask questions about specific tokens and its analysis on them.
 
+## Demo Video
+
+<div align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Gw7DDG22sT0" title="WaifuSDK Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 # Setup
 
 1. Clone the repository
