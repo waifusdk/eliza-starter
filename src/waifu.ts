@@ -4,6 +4,8 @@ import "dotenv/config";
 
 import TOKEN_METADATA from "../token_metadata.json";
 
+const user = "user" + Math.random();
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -37,14 +39,18 @@ async function getContextualTokenInput(input) {
   const token = extractTokenName(input);
 
   const tokenMetadata = getTokenMetadata(token);
-
   return await waifuSDK.token.get(tokenMetadata);
 }
 
 async function getContextualInformation(input) {
   const tokenContext = await getContextualTokenInput(input);
+  const usableContext = {
+    pair: tokenContext.pairData ? tokenContext.pairData[0] : null,
+    market: tokenContext.marketData ? tokenContext.marketData : null,
+    social: tokenContext.socialData ? tokenContext.socialData : null,
+  };
   const prompt =
-    "Context:  " + JSON.stringify(tokenContext) + ", question: " + input;
+    "Context:  " + JSON.stringify(usableContext, null) + ", question: " + input;
   return prompt;
 }
 
@@ -60,8 +66,8 @@ async function handleUserInput(input, agentId) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         text: input,
-        userId: "user",
-        userName: "User",
+        userId: user,
+        userName: user,
       }),
     });
     const data = await response.json();
